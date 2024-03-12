@@ -14,17 +14,18 @@ def swapdigits(num, key): #swaps the digits of a number according to the key (no
         new=new+key[int(num[i])]
     return new
 
-def test(a,b,c, key): #tests if the converted equation is true
+def test(a,b,c, key): #tests if the converted equation is true; a,b,c are strings, key is a list
     if int(swapdigits(a,key)) + int(swapdigits(b,key)) == int(swapdigits(c,key)):
         return True
     else:
         return False
     
-s = input()
+s = input() #A+B=C
 d,c = s.split("=")
 a,b = d.split("+")
-zerotonine = [str(i) for i in range(10)]
-permlist = list(permutations(zerotonine))
+zerotonine = [str(i) for i in range(10)] # ["0", "1", ... "8", "9"]
+permlist = list(permutations(zerotonine)) #list of all permutations of 0-9
+
 solution=""
 for perm in permlist:
     if test(a,b,c,perm):        
