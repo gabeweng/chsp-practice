@@ -5,9 +5,9 @@ y=["5","3","0","1","6","8","9","2","7","4"]
 
 
 def convert(num): #swaps index and value of a list
-    new = [0]*10
+    new = [""]*10
     for i in range(10):
-        new[int(num[i])]=i
+        new[int(num[i])]=str(i)
     return new
 
 def swapdigits(num, key): #swaps the digits of a number according to the key (not same format as final answer)
@@ -34,5 +34,5 @@ for perm in permlist:
     if test(a,b,c,perm):        
         solution=convert(perm)
         break
-print(solution)
+print("".join(solution))
         
