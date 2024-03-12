@@ -1,9 +1,5 @@
 from itertools import permutations
 
-z=[2,3,7,1,9,0,4,8,5,6]
-y=["5","3","0","1","6","8","9","2","7","4"]
-
-
 def convert(num): #swaps index and value of a list
     new = [""]*10
     for i in range(10):
