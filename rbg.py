@@ -2,7 +2,7 @@
 
 
 #PART 1: PUTTING PIXEL VALUES INTO A 4D ARRAY
-w,l,h = list(map(int, input().split()))
+w,l,h = list(map(int, input().split())) #"1 2 3" --> ["1","2","3"] --> [1,2,3]
 
 arr=[[[[0,0,0] for i in range(h)] for j in range(l)] for k in range(w)] # 4D array with arr[w][l][h] being the RGB value of the pixel at (w,l,h)
 
