@@ -10,15 +10,17 @@ arr=[[[[0,0,0] for i in range(h)] for j in range(l)] for k in range(w)] # 4D arr
 for i in range(w):
     for j in range(l):
         for k in range(h):
-            arr[i][j][k] = list(map(int, input().split())) #RGB value of pixel at (i,j,k)
+            arr[i][j][k] = list(map(int, input().split())) #RGB value of pixel at (i,j,k), stored going from 0 to w-1, 0 to l-1, 0 to h-1
 
-numPixels = int(input())
+#PART 2: AVERAGING PIXELS
 
-for i in range(numPixels):
-    sum = [0,0,0]
-    n = 0
-    x1,y1,z1,x2,y2,z2 = list(map(int, input().split()))
-    x1-=1
+numPixels = int(input()) 
+
+for i in range(numPixels): #do something for each pixel
+    sum = [0,0,0] #store sums of RGB values
+    n = 0 #store number of dots in the pixel
+    x1,y1,z1,x2,y2,z2 = list(map(int, input().split())) #get boundaries of the box
+    x1-=1 #refer to background info.
     y1-=1
     z1-=1
     x2-=1
