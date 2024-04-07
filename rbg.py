@@ -1,3 +1,5 @@
+#BACKGROUND: The problem uses 1 to n, while python uses 0 to n-1. We will need to convert.
+
 w,l,h = list(map(int, input().split()))
 
 arr=[[[[0,0,0] for i in range(h)] for j in range(l)] for k in range(w)] # 4D array with arr[w][l][h] being the RGB value of the pixel at (w,l,h)
