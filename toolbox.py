@@ -3,6 +3,11 @@
 arr = input().split() #array of strings
 arr = list(map(int, input().split())) #array of integers
 
+#lambda functions
+
+lambda_cube = lambda y: y*y*y
+
+
 "".join([1,2,3])
 
 # initiating cool arrays
@@ -12,17 +17,17 @@ arr=[[[[0,0,0] for i in range(h)] for j in range(l)] for k in range(w)] # 4D arr
 zerotonine = [str(i) for i in range(10)]
 
 #itertools
-from itertools import permutations
+from itertools import permutations, product, combinations, combinations_with_replacement
 
-''' can be used with string, array, etc.
+#can be used with string, array, etc.
 product('ABCD', repeat=2) #exactly like nested for loop
-AA AB AC AD BA BB BC BD CA CB CC CD DA DB DC DD
+#AA AB AC AD BA BB BC BD CA CB CC CD DA DB DC DD
 
-permutations('ABCD', 2) #like above but no repeating elemetnts
-AB AC AD BA BC BD CA CB CD DA DB DC
+permutations('ABCD', 2) #like above but no repeating elements (no AA but yes ba)
+#AB AC AD BA BC BD CA CB CD DA DB DC
 
 combinations('ABCD', 2) #subarrays (essentailly there will be AB but no BA)
-AB AC AD BC BD CD
+#AB AC AD BC BD CD
 
 combinations_with_replacement('ABCD', 2) #subarrays but repeat for some reason?
-AA AB AC AD BB BC BD CC CD DD'''
+#AA AB AC AD BB BC BD CC CD DD
